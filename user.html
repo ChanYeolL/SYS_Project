@@ -13,12 +13,11 @@
     } </script>
     <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
     <!--//main-->
-    <link href="style.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="css/swipebox.css">
     <!--//top-->
     <link href="css/style.css" rel='stylesheet' type='text/css'/>
     <link rel="stylesheet" href="css/jquery.countdown.css"/>
-    <link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <!--js-->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -135,15 +134,6 @@
                 <li><a href="LibraryIntroduce.html">项目管理</a></li>
                 <li><a href="ReaderService.html">ACM管理</a></li>
                 <li><a href="#">读书管理</a></li>
-                <!--<li class="dropdown">-->
-                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">本馆通知<span class="caret"></span></a>-->
-                <!--<ul class="dropdown-menu" role="menu">-->
-                <!--<li><a href="terms.html">工作动态</a></li>-->
-                <!--<li><a href="shortcodes.html">公告通知</a></li>-->
-                <!--<li><a href="faq.html">新书通报</a></li>-->
-                <!--<li><a href="faq.html">读者荐购</a></li>-->
-                <!--</ul>-->
-                <!--</li>-->
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">培训计划<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
@@ -286,7 +276,6 @@
                 <div class="current-select">项目 <a class="btn btn-default buildNew" data-toggle="modal" data-target="#newproject"> 新&nbsp;&nbsp;建</a></div>
             </div>
             <div class="item newcourse ">
-
                 <div class="myself">
                     <img src="images/img1.jpg" class="pic_myself">
                     <span class="myname">灿烈</span>
@@ -764,6 +753,7 @@
                             </div>
                             <div>
                                 <a href="#" target="_blank" class=" btn btn-default js-concern-msg">私 &nbsp;&nbsp;信</a>
+                                <a href="#" target="_blank" class=" btn btn-default js-concern-msg">关 &nbsp;&nbsp;注</a>
                             </div>
                         </div>
                     </li>
@@ -796,6 +786,7 @@
                             </div>
                             <div>
                                 <a href="#" target="_blank" class=" btn btn-default js-concern-msg">私 &nbsp;&nbsp;信</a>
+                                <a href="#" target="_blank" class=" btn btn-default js-concern-msg">关 &nbsp;&nbsp;注</a>
                             </div>
                         </div>
                     </li>
@@ -828,6 +819,7 @@
                             </div>
                             <div>
                                 <a href="#" target="_blank" class=" btn btn-default js-concern-msg">私 &nbsp;&nbsp;信</a>
+                                <a href="#" target="_blank" class=" btn btn-default js-concern-msg">关 &nbsp;&nbsp;注</a>
                             </div>
                         </div>
                     </li>
@@ -862,6 +854,7 @@
                             </div>
                             <div>
                                 <a href="#" target="_blank" class=" btn btn-default js-concern-msg">私 &nbsp;&nbsp;信</a>
+                                <a href="#" target="_blank" class=" btn btn-default js-concern-msg">关 &nbsp;&nbsp;注</a>
                             </div>
                         </div>
                     </li>
@@ -894,6 +887,7 @@
                             </div>
                             <div>
                                 <a href="#" target="_blank" class=" btn btn-default js-concern-msg">私 &nbsp;&nbsp;信</a>
+                                <a href="#" target="_blank" class=" btn btn-default js-concern-msg">关 &nbsp;&nbsp;注</a>
                             </div>
                         </div>
                     </li>
@@ -926,6 +920,7 @@
                             </div>
                             <div>
                                 <a href="#" target="_blank" class=" btn btn-default js-concern-msg">私 &nbsp;&nbsp;信</a>
+                                <a href="#" target="_blank" class=" btn btn-default js-concern-msg">关 &nbsp;&nbsp;注</a>
                             </div>
                         </div>
                     </li>
@@ -1134,10 +1129,6 @@
 </div>
 <!--//footer-->
 
-<div class="footer-up" style="display: block">
-    <a class="to-up"> <i class="fa fa-angle-up btn-up"></i> </a>
-</div>
-
 <div id="newproject" class="modal fade " role="dialog" aria-hidden="true">
     <div class="modal-dialog ">
         <div class="modal-content">
@@ -1150,17 +1141,20 @@
                 </div>
                 <div class="modal-body">
                     <div class="row">
+                        <div class="Text">时间:</div>
+                        <div class="Input">
+                            <select id="status" class="form-control batch" onchange="" name="status">
+                                <option value="0">17年下15级</option>
+                                <option value="1">17年下16级</option>
+                                <option value="2">17年下17级</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="Text">项目名:</div>
                         <div class="Input">
                             <input type="text" class="form-control" name="projectname">
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="Text">成员:</div>
-                        <div class="Input">
-                            <div class="projectMemberShow"></div>
-                        </div>
-                        <a class="addMember"><i class="fa fa-plus-square "></i></a>
                     </div>
                     <div class="row">
                         <div class="Text">说明<span>(可选)</span>:</div>
@@ -1296,23 +1290,22 @@
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <div class="Text">学期:</div>
+                        <div class="Text">开始时间:</div>
                         <div class="Input">
-                            <input type="text" class="form-control" name="projectname">
+                            <input type="date">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="Text">成员:</div>
+                        <div class="Text">结束时间:</div>
                         <div class="Input">
-                            <div class="projectMemberShow"></div>
+                            <input type="date">
                         </div>
-                        <a class="addMember"><i class="fa fa-plus-square "></i></a>
                     </div>
                     <div class="row">
                         <div class="Text">说明<span>(可选)</span>:</div>
                         <div class="Input">
                             <textarea class="detail_textarea" maxlength="568" name="text" rows="3" cols="30"
-                                      style="color: rgb(34, 34, 34); width: 100%"></textarea>
+                                      style="color: rgb(34, 34, 34); width: 100% "></textarea>
                         </div>
                     </div>
                 </div>
